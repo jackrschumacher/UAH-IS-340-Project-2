@@ -13,7 +13,7 @@ CREATE TABLE Incident(
 IncidentID INT NOT NULL,
 Title varchar(25) NOT NULL,
 CreationTime DATETIME NOT NULL,
-Severity varchar(25) NOT NULL,
+Severity varchar(10) NOT NULL,
 ResponseDeadline DATETIME NOT NULL,
 IsCoordinatedAttack BIT NOT NULL,
 AnalystID INT NOT NULL,
@@ -24,9 +24,23 @@ Severity varchar(10) NOT NULL,
 ResponseHours INT NOT NULL,
 PRIMARY KEY(Severity));
 
--- TODO Create Lookup table for SLARuleTable
+CREATE TABLE Alerts(
+AlertID INT NOT NULL,
+IncidentID INT NOT NULL,
+ToolName varchar(25) NOT NULL,
+ThreatScore INT NOT NULL,
+Timestamp DATETIME NOT NULL,
+PRIMARY KEY(AlertID));
 
+CREATE TABLE Action(
+
+)
 -- Alter Analyst table to add FK- An analyst can respond to many incidents
 ALTER TABLE Incident 
 ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID);
-
+-- Alter Incident Table to add FK- SLARuleTable
+ALTER TABLE Incident
+ADD FOREIGN KEY (Severity) REFERENCES SLARuleTable(Severity);
+-- Alter Alert table to add FK- IncidentID
+ALTER TABLE Alerts
+ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
