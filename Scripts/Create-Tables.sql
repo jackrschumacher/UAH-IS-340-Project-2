@@ -33,8 +33,13 @@ Timestamp DATETIME NOT NULL,
 PRIMARY KEY(AlertID));
 
 CREATE TABLE Action(
+ActionID INT NOT NULL,
+IncidentID INT NOT NULL,
+AnalystID INT NOT NULL,
+ActionDescription TEXT NOT NULL,
+Status varchar(25) NOT NULL,
+PRIMARY KEY (ActionID));
 
-)
 -- Alter Analyst table to add FK- An analyst can respond to many incidents
 ALTER TABLE Incident 
 ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID);
