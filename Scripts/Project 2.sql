@@ -17,6 +17,7 @@ Severity varchar(10) NOT NULL,
 ResponseDeadline DATETIME NOT NULL,
 IsCoordinatedAttack BIT NOT NULL,
 AnalystID INT NOT NULL,
+ActionID INT NOT NULL,
 PRIMARY KEY(IncidentID));
 
 CREATE TABLE SLARuleTable(
@@ -46,6 +47,12 @@ ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID);
 -- Alter Incident Table to add FK- SLARuleTable
 ALTER TABLE Incident
 ADD FOREIGN KEY (Severity) REFERENCES SLARuleTable(Severity);
+-- Alter Incident table to add FK- ActionID 
+ALTER TABLE Incident
+ADD FOREIGN KEY (ActionID) REFRENCES Action(ActionID);
+-- Alter Action Table to add FK- IncidentID in Action
+ALTER TABLE ACTION
+ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
 -- Alter Alert table to add FK- IncidentID
 ALTER TABLE Alerts
 ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
