@@ -16,8 +16,7 @@ CreationTime DATETIME NOT NULL,
 Severity varchar(10) NOT NULL,
 ResponseDeadline DATETIME NOT NULL,
 IsCoordinatedAttack BIT NOT NULL,
-AnalystID INT NOT NULL,
-ActionID INT NOT NULL,
+AnalystID INT,
 PRIMARY KEY(IncidentID));
 
 CREATE TABLE SLARuleTable(
@@ -27,7 +26,7 @@ PRIMARY KEY(Severity));
 
 CREATE TABLE Alerts(
 AlertID INT NOT NULL,
-IncidentID INT NOT NULL,
+IncidentID INT,
 ToolName varchar(25) NOT NULL,
 ThreatScore INT NOT NULL,
 Timestamp DATETIME NOT NULL,
@@ -35,24 +34,42 @@ PRIMARY KEY(AlertID));
 
 CREATE TABLE Action(
 ActionID INT NOT NULL,
-IncidentID INT NOT NULL,
-AnalystID INT NOT NULL,
+IncidentID INT,
+AnalystID INT,
 ActionDescription TEXT NOT NULL,
 Status varchar(25) NOT NULL,
 PRIMARY KEY (ActionID));
 
--- Alter Analyst table to add FK- An analyst can respond to many incidents
-ALTER TABLE Incident 
-ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID);
+CREATE TABLE ThreatIndicators(
+IndicatorID INT NOT NULL,
+IndicatorType varchar(30) NOT NULL,
+IndicatorValue varchar(500) NOT NULL,
+Categories varchar(30) NOT NULL,
+PRIMARY KEY (IndicatorID));
+
+
 -- Alter Incident Table to add FK- SLARuleTable
 ALTER TABLE Incident
 ADD FOREIGN KEY (Severity) REFERENCES SLARuleTable(Severity);
--- Alter Incident table to add FK- ActionID 
+-- Alter Incident Table to add FK- AnalystID - One analyist is associated with the Incident response
 ALTER TABLE Incident
-ADD FOREIGN KEY (ActionID) REFRENCES Action(ActionID);
+ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID);
 -- Alter Action Table to add FK- IncidentID in Action
-ALTER TABLE ACTION
+ALTER TABLE Action
 ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
+-- Alter Action table to add FK- AnalystID in Action - One Analyst is associated is with an action
+ALTER TABLE Action
+ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID);
 -- Alter Alert table to add FK- IncidentID
 ALTER TABLE Alerts
 ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
+
+-- Loading data
+
+-- TODO: Replace with rule lookup
+INSERT INTO SLARuleTable(Severity, ResponseHours)
+VALUES
+('Critical',1),
+('High',4),
+('Medium',24),
+('Low',48);
