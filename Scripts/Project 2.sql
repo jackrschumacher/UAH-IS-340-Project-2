@@ -47,6 +47,9 @@ IndicatorValue varchar(500) NOT NULL,
 Categories varchar(30) NOT NULL,
 PRIMARY KEY (IndicatorID));
 
+CREATE TABLE IncidentThreatIndicators(
+IncidentID INT NOT NULL,
+IndicatorID INT NOT NULL);
 
 -- Alter Incident Table to add FK- SLARuleTable
 ALTER TABLE Incident
@@ -63,6 +66,12 @@ ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID);
 -- Alter Alert table to add FK- IncidentID
 ALTER TABLE Alerts
 ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
+-- Alter IncidentThreatIndicators
+ALTER TABLE IncidentThreatIndicators
+ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID); 
+
+ALTER TABLE IncidentThreatIndicators
+ADD FOREIGN KEY (IndicatorID) REFERENCES ThreatIndicators(IndicatorID); 
 
 -- Loading data
 
