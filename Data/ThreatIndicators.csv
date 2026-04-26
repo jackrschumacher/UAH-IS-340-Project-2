@@ -1,0 +1,51 @@
+IndicatorID,IndicatorType,IndicatorValue,Categories
+4001,Domain,suspicious1.net,Credential Theft
+4002,Domain,suspicious2.net,Phishing
+4003,Domain,suspicious3.net,Malware
+4004,Domain,suspicious4.net,Ransomware
+4005,Domain,suspicious5.net,Malware
+4006,File Hash,ABCD0006HASHVALUE,Malware
+4007,IP Address,203.0.113.7,Phishing
+4008,IP Address,203.0.113.8,Malware
+4009,IP Address,203.0.113.9,Credential Theft
+4010,Domain,suspicious10.net,Credential Theft
+4011,Domain,suspicious11.net,Malware
+4012,IP Address,203.0.113.12,Phishing
+4013,IP Address,203.0.113.13,Credential Theft
+4014,Domain,ABCD000EHASHVALUE,Ransomware
+4015,File Hash,ABCD000FHASHVALUE,Credential Theft
+4016,Domain,203.0.113.16,Ransomware
+4017,File Hash,suspicious17.net,Ransomware
+4018,Domain,suspicious18.net,Phishing
+4019,IP Address,203.0.113.19,Phishing
+4020,IP Address,203.0.113.20,Phishing
+4021,IP Address,ABCD0015HASHVALUE,Ransomware
+4022,File Hash,ABCD0016HASHVALUE,Ransomware
+4023,IP Address,203.0.113.23,Ransomware
+4024,IP Address,203.0.113.24,Phishing
+4025,IP Address,203.0.113.25,Ransomware
+4026,File Hash,ABCD001AHASHVALUE,Malware
+4027,IP Address,203.0.113.27,Malware
+4028,File Hash,ABCD001CHASHVALUE,Credential Theft
+4029,File Hash,ABCD001DHASHVALUE,Ransomware
+4030,IP Address,203.0.113.30,Ransomware
+4031,Domain,suspicious31.net,Phishing
+4032,Domain,suspicious32.net,Malware
+4033,IP Address,203.0.113.33,Ransomware
+4034,IP Address,203.0.113.34,Malware
+4035,Domain,suspicious35.net,Malware
+4036,Domain,suspicious36.net,Phishing
+4037,Domain,suspicious37.net,Phishing
+4038,File Hash,ABCD0026HASHVALUE,Phishing
+4039,IP Address,203.0.113.39,Credential Theft
+4040,File Hash,ABCD0028HASHVALUE,Malware
+4041,IP Address,203.0.113.41,Ransomware
+4042,IP Address,203.0.113.42,Credential Theft
+4043,File Hash,ABCD002BHASHVALUE,Credential Theft
+4044,IP Address,203.0.113.44,Malware
+4045,IP Address,203.0.113.45,Credential Theft
+4046,IP Address,suspicious46.net,Ransomware
+4047,Domain,suspicious47.net,Ransomware
+4048,File Hash,ABCD0030HASHVALUE,Malware
+4049,File Hash,ABCD0031HASHVALUE,Credential Theft
+4050,Domain,suspicious50.net,Credential Theft

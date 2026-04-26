@@ -1,0 +1,51 @@
+AnalystID,FirstName,LastName,Email,Role,HireDate
+1,Kevin,Martinez,kevin.martinez51@gmail.com,Tier-1,2024-04-20
+2,Jonathan,Miller,jonathan.miller47@icloud.com,Tier-1,2024-07-20
+3,Eric,Wilson,eric.wilson5@gmail.com,SOC Lead,2023-03-05
+4,William,Thomas,william.thomas12@icloud.com,SOC Lead,2022-03-02
+5,Justin,Davis,justin.davis29@icloud.com,Tier-1,2023-08-14
+6,Scott,Sanchez,scott.sanchez7@outlook.com,Tier-1,2023-07-25
+7,Charles,Jackson,charles.jackson54@outlook.com,Tier-1,2023-08-08
+8,Kenneth,Scott,kenneth.scott88@outlook.com,Tier-1,2023-08-19
+9,Justin,Green,justin.green25@yahoo.com,Tier-1,2023-07-15
+10,Patrick,Jones,patrick.jones73@gmail.com,Tier-2,2023-05-24
+11,Alexander,Wright,alexander.wright55@yahoo.com,SOC Lead,2023-08-23
+12,Jacob,White,jacob.white39@outlook.com,Tier-2,2023-12-17
+13,Tyler,Thomas,tyler.thomas11@icloud.com,Threat Hunter,2023-06-22
+14,Nicholas,Perez,nicholas.perez94@protonmail.com,Threat Hunter,2023-09-16
+15,William,Davis,william.davis66@protonmail.com,Tier-2,2024-02-15
+16,Brian,Martinez,brian.martinez63@protonmail.com,Tier-1,2024-09-12
+17,Frank,Jones,frank.jones98@icloud.com,Threat Hunter,2022-12-15
+18,Raymond,Thompson,raymond.thompson77@protonmail.com,SOC Lead,2022-03-12
+19,Richard,Moore,richard.moore61@gmail.com,Tier-1,2024-01-19
+20,Raymond,Martin,raymond.martin83@icloud.com,SOC Lead,2022-10-19
+21,Patrick,Harris,patrick.harris86@yahoo.com,Tier-1,2024-08-21
+22,Jacob,Thompson,jacob.thompson22@icloud.com,Tier-1,2023-05-21
+23,David,Wilson,david.wilson99@yahoo.com,Tier-2,2024-01-27
+24,Steven,Sanchez,steven.sanchez51@protonmail.com,Tier-1,2022-06-20
+25,Ryan,Sanchez,ryan.sanchez71@yahoo.com,Tier-2,2024-04-18
+26,Jeffrey,Scott,jeffrey.scott36@protonmail.com,Threat Hunter,2023-12-01
+27,Ronald,Anderson,ronald.anderson20@gmail.com,Tier-2,2022-06-04
+28,Donald,Nelson,donald.nelson30@gmail.com,SOC Lead,2024-05-01
+29,Scott,Lopez,scott.lopez34@yahoo.com,Tier-1,2022-05-30
+30,Jason,Wright,jason.wright48@icloud.com,Threat Hunter,2024-09-02
+31,Charles,Hall,charles.hall66@icloud.com,Tier-1,2023-04-13
+32,Tyler,Baker,tyler.baker72@protonmail.com,SOC Lead,2023-02-13
+33,Timothy,Miller,timothy.miller62@protonmail.com,Tier-1,2022-07-15
+34,William,Wilson,william.wilson57@outlook.com,Tier-1,2022-12-15
+35,Brandon,Brown,brandon.brown14@gmail.com,Tier-2,2023-07-04
+36,Joseph,White,joseph.white79@gmail.com,Tier-1,2024-06-14
+37,Mark,Flores,mark.flores49@outlook.com,Threat Hunter,2024-09-05
+38,George,Hill,george.hill47@protonmail.com,Tier-1,2022-04-29
+39,Nicholas,Robinson,nicholas.robinson62@protonmail.com,Threat Hunter,2022-03-29
+40,Christopher,Miller,christopher.miller96@yahoo.com,Threat Hunter,2023-05-06
+41,Raymond,Hernandez,raymond.hernandez67@gmail.com,Tier-2,2024-08-31
+42,Stephen,White,stephen.white19@icloud.com,Tier-1,2024-02-16
+43,Stephen,Martin,stephen.martin83@gmail.com,Threat Hunter,2023-06-15
+44,Edward,Hernandez,edward.hernandez46@outlook.com,Threat Hunter,2023-10-14
+45,Donald,Flores,donald.flores98@outlook.com,Tier-2,2024-04-17
+46,Timothy,Mitchell,timothy.mitchell30@outlook.com,SOC Lead,2022-12-31
+47,Jack,Johnson,jack.johnson4@yahoo.com,SOC Lead,2022-09-23
+48,Anthony,Hall,anthony.hall78@yahoo.com,SOC Lead,2024-04-07
+49,Jack,Thompson,jack.thompson47@gmail.com,Tier-2,2022-04-15
+50,Donald,Walker,donald.walker26@yahoo.com,Tier-2,2023-05-10
