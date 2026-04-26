@@ -4,14 +4,14 @@ CREATE TABLE Analyst(
 AnalystID INT NOT NULL,
 AnalystFirstName varchar(25) NOT NULL,
 AnalystLastName varchar(25) NOT NULL,
-Email varchar(25) NOT NULL,
-Role varchar(25) NOT NULL,
+Email varchar(256) NOT NULL,
+Role varchar(100) NOT NULL,
 HireDate DATE NOT NULL,
 PRIMARY KEY(AnalystID));
 
 CREATE TABLE Incident(
 IncidentID INT NOT NULL,
-Title varchar(25) NOT NULL,
+Title varchar(50) NOT NULL,
 CreationTime DATETIME NOT NULL,
 Severity varchar(10) NOT NULL,
 ResponseDeadline DATETIME NOT NULL,
@@ -27,7 +27,7 @@ PRIMARY KEY(Severity));
 CREATE TABLE Alerts(
 AlertID INT NOT NULL,
 IncidentID INT,
-ToolName varchar(25) NOT NULL,
+ToolName varchar(100) NOT NULL,
 ThreatScore INT NOT NULL,
 Timestamp DATETIME NOT NULL,
 PRIMARY KEY(AlertID));
@@ -37,6 +37,7 @@ ActionID INT NOT NULL,
 IncidentID INT,
 AnalystID INT,
 ActionDescription TEXT NOT NULL,
+ActionTimestamp DATETIME NOT NULL,
 Status varchar(25) NOT NULL,
 PRIMARY KEY (ActionID));
 
@@ -50,7 +51,6 @@ PRIMARY KEY (IndicatorID));
 CREATE TABLE IncidentThreatIndicators(
 IncidentID INT NOT NULL,
 IndicatorID INT NOT NULL);
-
 -- Alter Incident Table to add FK- SLARuleTable
 ALTER TABLE Incident
 ADD FOREIGN KEY (Severity) REFERENCES SLARuleTable(Severity);
@@ -68,17 +68,67 @@ ALTER TABLE Alerts
 ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
 -- Alter IncidentThreatIndicators
 ALTER TABLE IncidentThreatIndicators
-ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID); 
-
+ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
 ALTER TABLE IncidentThreatIndicators
-ADD FOREIGN KEY (IndicatorID) REFERENCES ThreatIndicators(IndicatorID); 
+ADD FOREIGN KEY (IndicatorID) REFERENCES ThreatIndicators(IndicatorID);
 
 -- Loading data
+BULK INSERT Action
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-2\Data\Action.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);
 
--- TODO: Replace with rule lookup
-INSERT INTO SLARuleTable(Severity, ResponseHours)
-VALUES
-('Critical',1),
-('High',4),
-('Medium',24),
-('Low',48);
+BULK INSERT Alerts
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-2\Data\Alerts.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);
+
+BULK INSERT Analyst
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-2\Data\Analyst.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);
+
+BULK INSERT Incident
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-2\Data\Incident.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);
+
+BULK INSERT IncidentThreatIndicators
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-2\Data\IncidentThreatIndicators.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);
+
+BULK INSERT SLARuleTable
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-2\Data\SLARuleTable.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);
+
+BULK INSERT ThreatIndicators
+FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-2\Data\ThreatIndicators.csv"
+WITH (
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2,
+TABLOCK);
+
+-- Queries
+
+
