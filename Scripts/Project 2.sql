@@ -62,15 +62,19 @@ ALTER TABLE Action
 ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
 -- Alter Action table to add FK- AnalystID in Action - One Analyst is associated is with an action
 ALTER TABLE Action
-ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID);
+ADD FOREIGN KEY (AnalystID) REFERENCES Analyst(AnalystID)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 -- Alter Alert table to add FK- IncidentID
 ALTER TABLE Alerts
 ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
 -- Alter IncidentThreatIndicators
 ALTER TABLE IncidentThreatIndicators
-ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID);
+ADD FOREIGN KEY (IncidentID) REFERENCES Incident(IncidentID)
+ON DELETE CASCADE;
 ALTER TABLE IncidentThreatIndicators
-ADD FOREIGN KEY (IndicatorID) REFERENCES ThreatIndicators(IndicatorID);
+ADD FOREIGN KEY (IndicatorID) REFERENCES ThreatIndicators(IndicatorID)
+ON DELETE CASCADE;
 
 -- Loading data
 BULK INSERT Action
@@ -131,4 +135,19 @@ TABLOCK);
 
 -- Queries
 
+-- List the analystIDs of those who acted on incidents that were marked Critical severity.
+SELECT AnalystID, Severity
+FROM Incident
+WHERE Severity = 'Critical';
 
+-- The SOC lead wants a summary of how each monitoring tool is contributing to alert volume and threat intensity. For each monitoring tool: Report the total number of alerts it generated, and its average threat score. Sort the results in descending order of average threat score to prioritize tools generating the highest-risk signals.
+SELECT DISTINCT ToolName
+FROM Alerts
+
+-- The SOC (Security Operations Center) Manager has noticed that some incidents remain open longer than expected, potentially due to insufficient action or delays in response. Prepare a report that highlights all incidents where: The current status of the incident is not "Complete", Only one action has been logged against the incident, and that action is also not marked as 'Complete'. Your output should be only one single table.
+
+-- The compliance officer needs to investigate how well the organization is adhering to its response time commitments. Generate a report listing all incidents where: The severity level has a defined SLA rule, no analyst action was recorded within the allowed SLA response deadline window and the incident is still not marked as "Complete". Include for each incident: the title, severity, creation time, response deadline, and how late the first response is (in hours, if any).
+
+-- Threat assesment standardization
+
+-- The threat intel team wants to focus mitigation efforts on the type of indicator (e.g., IP Address, Domain, File Hash) that appears most frequently in phishing-related reports. Your task is to: Identify the IndicatorType with the highest number of ransomware-linked indicators. Then, list the IndicatorID, IndicatorValue, and IndicatorType for all ransomware indicators of that top type.
