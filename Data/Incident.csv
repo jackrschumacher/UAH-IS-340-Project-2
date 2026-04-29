@@ -1,51 +1,51 @@
 IncidentID,Title,CreationTime,Severity,ResponseDeadline,IsCoordinatedAttack,AnalystID
-1001,Critical incident #1,2025-07-01 09:00:00,Critical,2025-07-01 10:00:00,1,42
-1002,Medium incident #2,2025-07-01 10:00:00,Medium,2025-07-02 10:00:00,0,43
-1003,Critical incident #3,2025-07-01 11:00:00,Critical,2025-07-01 12:00:00,1,46
-1004,High incident #4,2025-07-01 12:00:00,High,2025-07-01 16:00:00,1,12
-1005,Low incident #5,2025-07-01 13:00:00,Low,2025-07-03 13:00:00,1,6
-1006,Low incident #6,2025-07-01 14:00:00,Low,2025-07-03 14:00:00,1,26
-1007,Critical incident #7,2025-07-01 15:00:00,Critical,2025-07-01 16:00:00,0,11
-1008,High incident #8,2025-07-01 16:00:00,High,2025-07-01 20:00:00,0,10
-1009,Low incident #9,2025-07-01 17:00:00,Low,2025-07-03 17:00:00,0,40
-1010,Low incident #10,2025-07-01 18:00:00,Low,2025-07-03 18:00:00,1,10
-1011,High incident #11,2025-07-01 19:00:00,High,2025-07-01 23:00:00,0,1
-1012,Critical incident #12,2025-07-01 20:00:00,Critical,2025-07-01 21:00:00,0,28
-1013,High incident #13,2025-07-01 21:00:00,High,2025-07-02 01:00:00,0,2
-1014,Medium incident #14,2025-07-01 22:00:00,Medium,2025-07-02 22:00:00,0,19
-1015,High incident #15,2025-07-01 23:00:00,High,2025-07-02 03:00:00,1,17
-1016,Low incident #16,2025-07-02 00:00:00,Low,2025-07-04 00:00:00,0,4
-1017,Medium incident #17,2025-07-02 01:00:00,Medium,2025-07-03 01:00:00,1,43
-1018,Low incident #18,2025-07-02 02:00:00,Low,2025-07-04 02:00:00,0,35
-1019,High incident #19,2025-07-02 03:00:00,High,2025-07-02 07:00:00,0,29
-1020,High incident #20,2025-07-02 04:00:00,High,2025-07-02 08:00:00,0,50
-1021,High incident #21,2025-07-02 05:00:00,High,2025-07-02 09:00:00,0,10
-1022,Low incident #22,2025-07-02 06:00:00,Low,2025-07-04 06:00:00,0,36
-1023,Critical incident #23,2025-07-02 07:00:00,Critical,2025-07-02 08:00:00,1,44
-1024,Low incident #24,2025-07-02 08:00:00,Low,2025-07-04 08:00:00,0,36
-1025,Critical incident #25,2025-07-02 09:00:00,Critical,2025-07-02 10:00:00,0,13
-1026,Medium incident #26,2025-07-02 10:00:00,Medium,2025-07-03 10:00:00,0,50
-1027,Critical incident #27,2025-07-02 11:00:00,Critical,2025-07-02 12:00:00,1,36
-1028,Critical incident #28,2025-07-02 12:00:00,Critical,2025-07-02 13:00:00,0,29
-1029,Medium incident #29,2025-07-02 13:00:00,Medium,2025-07-03 13:00:00,0,45
-1030,Medium incident #30,2025-07-02 14:00:00,Medium,2025-07-03 14:00:00,1,33
-1031,Low incident #31,2025-07-02 15:00:00,Low,2025-07-04 15:00:00,0,45
-1032,Medium incident #32,2025-07-02 16:00:00,Medium,2025-07-03 16:00:00,0,29
-1033,High incident #33,2025-07-02 17:00:00,High,2025-07-02 21:00:00,1,8
-1034,Low incident #34,2025-07-02 18:00:00,Low,2025-07-04 18:00:00,1,21
-1035,Critical incident #35,2025-07-02 19:00:00,Critical,2025-07-02 20:00:00,0,28
-1036,Critical incident #36,2025-07-02 20:00:00,Critical,2025-07-02 21:00:00,0,43
-1037,Medium incident #37,2025-07-02 21:00:00,Medium,2025-07-03 21:00:00,0,50
-1038,High incident #38,2025-07-02 22:00:00,High,2025-07-03 02:00:00,1,10
-1039,Medium incident #39,2025-07-02 23:00:00,Medium,2025-07-03 23:00:00,0,30
-1040,High incident #40,2025-07-03 00:00:00,High,2025-07-03 04:00:00,0,26
-1041,Low incident #41,2025-07-03 01:00:00,Low,2025-07-05 01:00:00,0,43
-1042,High incident #42,2025-07-03 02:00:00,High,2025-07-03 06:00:00,0,46
-1043,Low incident #43,2025-07-03 03:00:00,Low,2025-07-05 03:00:00,1,22
-1044,Low incident #44,2025-07-03 04:00:00,Low,2025-07-05 04:00:00,0,23
-1045,Medium incident #45,2025-07-03 05:00:00,Medium,2025-07-04 05:00:00,0,47
-1046,Medium incident #46,2025-07-03 06:00:00,Medium,2025-07-04 06:00:00,0,22
-1047,Low incident #47,2025-07-03 07:00:00,Low,2025-07-05 07:00:00,1,46
-1048,Critical incident #48,2025-07-03 08:00:00,Critical,2025-07-03 09:00:00,1,22
-1049,Medium incident #49,2025-07-03 09:00:00,Medium,2025-07-04 09:00:00,0,8
-1050,High incident #50,2025-07-03 10:00:00,High,2025-07-03 14:00:00,0,6
+1001,Critical incident #1,2025-07-01 09:00:00,Critical,,1,42
+1002,Medium incident #2,2025-07-01 10:00:00,Medium,,0,43
+1003,Critical incident #3,2025-07-01 11:00:00,Critical,,1,46
+1004,High incident #4,2025-07-01 12:00:00,High,,1,12
+1005,Low incident #5,2025-07-01 13:00:00,Low,,1,6
+1006,Low incident #6,2025-07-01 14:00:00,Low,,1,26
+1007,Critical incident #7,2025-07-01 15:00:00,Critical,,0,11
+1008,High incident #8,2025-07-01 16:00:00,High,,0,10
+1009,Low incident #9,2025-07-01 17:00:00,Low,,0,40
+1010,Low incident #10,2025-07-01 18:00:00,Low,,1,10
+1011,High incident #11,2025-07-01 19:00:00,High,,0,1
+1012,Critical incident #12,2025-07-01 20:00:00,Critical,,0,28
+1013,High incident #13,2025-07-01 21:00:00,High,,0,2
+1014,Medium incident #14,2025-07-01 22:00:00,Medium,,0,19
+1015,High incident #15,2025-07-01 23:00:00,High,,1,17
+1016,Low incident #16,2025-07-02 00:00:00,Low,,0,4
+1017,Medium incident #17,2025-07-02 01:00:00,Medium,,1,43
+1018,Low incident #18,2025-07-02 02:00:00,Low,,0,35
+1019,High incident #19,2025-07-02 03:00:00,High,,0,29
+1020,High incident #20,2025-07-02 04:00:00,High,,0,50
+1021,High incident #21,2025-07-02 05:00:00,High,,0,10
+1022,Low incident #22,2025-07-02 06:00:00,Low,,0,36
+1023,Critical incident #23,2025-07-02 07:00:00,Critical,,1,44
+1024,Low incident #24,2025-07-02 08:00:00,Low,,0,36
+1025,Critical incident #25,2025-07-02 09:00:00,Critical,,0,13
+1026,Medium incident #26,2025-07-02 10:00:00,Medium,,0,50
+1027,Critical incident #27,2025-07-02 11:00:00,Critical,,1,36
+1028,Critical incident #28,2025-07-02 12:00:00,Critical,,0,29
+1029,Medium incident #29,2025-07-02 13:00:00,Medium,,0,45
+1030,Medium incident #30,2025-07-02 14:00:00,Medium,,1,33
+1031,Low incident #31,2025-07-02 15:00:00,Low,,0,45
+1032,Medium incident #32,2025-07-02 16:00:00,Medium,,0,29
+1033,High incident #33,2025-07-02 17:00:00,High,,1,8
+1034,Low incident #34,2025-07-02 18:00:00,Low,,1,21
+1035,Critical incident #35,2025-07-02 19:00:00,Critical,,0,28
+1036,Critical incident #36,2025-07-02 20:00:00,Critical,,0,43
+1037,Medium incident #37,2025-07-02 21:00:00,Medium,,0,50
+1038,High incident #38,2025-07-02 22:00:00,High,,1,10
+1039,Medium incident #39,2025-07-02 23:00:00,Medium,,0,30
+1040,High incident #40,2025-07-03 00:00:00,High,,0,26
+1041,Low incident #41,2025-07-03 01:00:00,Low,,0,43
+1042,High incident #42,2025-07-03 02:00:00,High,,0,46
+1043,Low incident #43,2025-07-03 03:00:00,Low,,1,22
+1044,Low incident #44,2025-07-03 04:00:00,Low,,0,23
+1045,Medium incident #45,2025-07-03 05:00:00,Medium,,0,47
+1046,Medium incident #46,2025-07-03 06:00:00,Medium,,0,22
+1047,Low incident #47,2025-07-03 07:00:00,Low,,1,46
+1048,Critical incident #48,2025-07-03 08:00:00,Critical,,1,22
+1049,Medium incident #49,2025-07-03 09:00:00,Medium,,0,8
+1050,High incident #50,2025-07-03 10:00:00,High,,0,6

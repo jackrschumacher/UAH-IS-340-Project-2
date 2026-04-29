@@ -14,7 +14,7 @@ IncidentID INT NOT NULL,
 Title varchar(50) NOT NULL,
 CreationTime DATETIME NOT NULL,
 Severity varchar(10) NOT NULL,
-ResponseDeadline DATETIME NOT NULL,
+ResponseDeadline DATETIME NULL,
 IsCoordinatedAttack BIT NOT NULL,
 AnalystID INT,
 PRIMARY KEY(IncidentID));
@@ -134,6 +134,12 @@ FIELDTERMINATOR = ',',
 ROWTERMINATOR = '\n',
 FIRSTROW = 2,
 TABLOCK);
+
+-- Update the ResponseDeadline based on the severity level from the SLARuleTable
+UPDATE Incident 
+SET Incident.ResponseDeadline = DATEADD(HOUR, SLARuleTable.ResponseHours, Incident.CreationTime)
+FROM Incident
+JOIN SLARuleTable ON Incident.Severity = SLARuleTable.Severity;
 
 -- Queries
 
