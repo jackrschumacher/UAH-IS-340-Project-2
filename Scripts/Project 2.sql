@@ -78,6 +78,13 @@ ALTER TABLE IncidentThreatIndicators
 ADD FOREIGN KEY (IndicatorID) REFERENCES ThreatIndicators(IndicatorID)
 ON DELETE CASCADE;
 
+-- Create non-clustered indexes
+CREATE NONCLUSTERED INDEX IndicatorIDValueIndex
+ON ThreatIndicators(IndicatorID, IndicatorValue);
+
+CREATE NONCLUSTERED INDEX ActionTimestampIndex
+ON Action(ActionTimestamp);
+
 -- Loading data
 BULK INSERT Action
 FROM "C:\Users\jackr\Documents\UAH\UAH-IS-340-Project-2\Data\Action.csv"
